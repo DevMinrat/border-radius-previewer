@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     topRightAngle = document.querySelector("#top-right-angle"),
     bottomRightAngle = document.querySelector("#bottom-right-angle"),
     bottomLeftAngle = document.querySelector("#bottom-left-angle"),
-    resultCopyBtn = document.querySelector(".result-copy-btn");
+    resultCopyBtn = document.querySelector(".result-copy-btn"),
+    tooltip = document.querySelector("#tooltip");
 
   let btlr,
     btrr,
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     result.select();
     result.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    alert("Скопировал текст: " + result.value);
+    tooltip.innerHTML = "Скопированo: <br> " + result.value;
   }
 
   resultCopyBtn.addEventListener("click", copyResult);
