@@ -11,14 +11,27 @@ title: Border Radius Previewer
                 <label class="checkbox" for="value"></label>
             </div>
             <div class="checkbox-angles">
-                <input type="checkbox" value="None" id="corners" name="corners" checked />
-                <label class="checkbox angles-count" for="corners"></label>
+                <input type="checkbox" value="None" id="angles" name="angles" checked />
+                <label class="checkbox angles-count" for="angles"></label>
             </div>
             <div class="checkbox-independent">
                 <input class="ind-angl-input" type="checkbox" name="independ" id="independ" checked />
                 <label class="independent-angles" for="independ">Independent angles</label>
             </div>
         </div>
-        <div class="box"></div>
+
+        <div class="box-wrapper">
+            <input class="angle-radius" type="number" id="top-left-angle">
+            <input class="angle-radius angle-radius--right" type="number" id="top-right-angle">
+            <div class="box"></div>
+            <input class="angle-radius angle-radius--right" type="number" id="bottom-right-angle">
+            <input class="angle-radius" type="number" id="bottom-left-angle">
+
+        </div>
+
+        <div class="result">
+            <input class="result-input" value="border-radius: 0px 0px 0px 0px" type="text" id="result" readonly>
+            <button class="result-copy-btn" type="button">COPY</button>
+        </div>
     </div>
 </div>
