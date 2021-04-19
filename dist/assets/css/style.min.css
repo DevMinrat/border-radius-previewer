@@ -546,6 +546,8 @@ input[type="checkbox"] {
   min-height: 540px;
   margin: 0 auto 50px;
   padding-top: 35px; }
+  .box-wrapper input[readonly] {
+    background: #55626a; }
 
 .box {
   width: 100%;
@@ -574,7 +576,8 @@ input[type="checkbox"] {
 
 .result {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 50px; }
   .result-input {
     width: 100%;
     max-width: 530px;
@@ -629,3 +632,10 @@ input[type="checkbox"] {
 .result-copy-btn:hover .tooltiptext {
   visibility: visible;
   opacity: 1; }
+
+.copyright {
+  text-align: center; }
+  .copyright__text {
+    font-size: 18px; }
+    .copyright__text span {
+      font-weight: bold; }

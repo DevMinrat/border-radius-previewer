@@ -7,6 +7,10 @@
 
   margin: 0 auto 50px;
   padding-top: 35px;
+
+  & input[readonly] {
+    background: $text;
+  }
 }
 
 .box {
@@ -50,6 +54,8 @@
 .result {
   display: flex;
   justify-content: center;
+
+  margin-bottom: 50px;
 
   &-input {
     width: 100%;
@@ -125,4 +131,16 @@
 .result-copy-btn:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.copyright {
+  text-align: center;
+
+  &__text {
+    font-size: 18px;
+
+    & span {
+      font-weight: bold;
+    }
+  }
 }
