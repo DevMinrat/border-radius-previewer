@@ -10,22 +10,25 @@ title: Border Radius Previewer
                 <input type="checkbox" value="None" id="value" name="value" checked />
                 <label class="checkbox" for="value"></label>
             </div>
-            <div class="checkbox-angles">
-                <input type="checkbox" value="None" id="angles" name="angles" checked />
-                <label class="checkbox angles-count" for="angles"></label>
-            </div>
             <div class="checkbox-independent">
                 <input class="ind-angl-input" type="checkbox" name="independ" id="independ" checked />
                 <label class="independent-angles" for="independ">Independent angles</label>
             </div>
+
+            <div class="sizes">
+                <p class="sizes-label">Box size: </p>
+                <input class="size-input" type="number" id="size-width" placeholder="width">
+                <input class="size-input" type="number" id="size-height" placeholder="height">
+
+            </div>
         </div>
 
         <div class="box-wrapper">
-            <input class="angle-radius" type="number" id="top-left-angle">
-            <input class="angle-radius angle-radius--right" type="number" id="top-right-angle">
+            <input class="angle-radius top-left-angle" type="number" id="top-left-angle">
+            <input class="angle-radius top-right-angle" type="number" id="top-right-angle">
             <div class="box"></div>
-            <input class="angle-radius angle-radius--right" type="number" id="bottom-right-angle">
-            <input class="angle-radius" type="number" id="bottom-left-angle">
+            <input class="angle-radius bottom-right-angle" type="number" id="bottom-right-angle">
+            <input class="angle-radius bottom-left-angle" type="number" id="bottom-left-angle">
 
         </div>
 

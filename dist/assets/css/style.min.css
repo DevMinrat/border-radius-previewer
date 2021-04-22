@@ -409,7 +409,7 @@ html {
 body {
   background: linear-gradient(90deg, #8e9eab 0%, #e8f2f3 100%);
   font-family: Arial, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.1;
   color: #55626a; }
 
@@ -427,48 +427,51 @@ a {
 .container {
   width: 100%;
   max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 10px;
   margin: 0 auto; }
 
 .header__title {
   width: 100%;
   max-width: 700px;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: normal;
   text-align: center;
-  margin: 50px auto 25px;
+  margin: 40px auto 25px;
   padding-bottom: 15px;
   border-bottom: 1px solid #545d64; }
 
 .panel {
   width: 100%;
-  max-width: 510px;
+  max-width: 760px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 40px; }
+  margin: 0 auto 75px; }
 
 .checkbox {
   position: relative;
   display: block;
-  width: 80px;
-  height: 40px;
+  width: 70px;
+  height: 35px;
   background: rgba(110, 153, 170, 0.5);
   border: 1px solid #25414a;
   border-radius: 20px;
   cursor: pointer; }
   .checkbox::before {
     content: "%";
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     position: absolute;
     left: 39px;
     top: -1px;
     z-index: 2;
-    padding-top: 11px;
+    padding-top: 9px;
     text-align: center;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #25414a;
     border-radius: 50%;
     transition: all 0.1s linear;
@@ -482,7 +485,7 @@ a {
     z-index: 1;
     transform: translateY(-50%);
     color: #55626a;
-    font-size: 20px; }
+    font-size: 16px; }
   .checkbox.angles-count::after {
     content: "4x"; }
   .checkbox.angles-count::before {
@@ -507,9 +510,7 @@ input[type="checkbox"] {
 
 .independent-angles {
   position: relative;
-  padding-left: 55px;
-  font-weight: bold;
-  font-size: 24px;
+  padding-left: 45px;
   cursor: pointer; }
   .independent-angles::before {
     content: "";
@@ -518,8 +519,8 @@ input[type="checkbox"] {
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background: rgba(255, 255, 255, 0.4);
     border: 2px solid #25414a;
     border-radius: 50%; }
@@ -531,39 +532,57 @@ input[type="checkbox"] {
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: #25414a;
     border-radius: 50%; }
 
 .ind-angl-input:checked + .independent-angles::after {
   display: block; }
 
+.sizes-label {
+  display: inline-block;
+  margin-right: 10px; }
+
+.size-input {
+  width: 100%;
+  max-width: 100px;
+  height: 35px;
+  color: #55626a;
+  padding: 0 9px;
+  background: rgba(142, 158, 171, 0.3);
+  border: 1px solid #545d64; }
+  .size-input:focus {
+    background: rgba(255, 255, 255, 0.4);
+    outline: none; }
+
 .box-wrapper {
-  position: relative;
+  display: grid;
+  grid-template-columns: 100px minmax(10px, 490px) 100px;
+  grid-template-rows: 35px minmax(10px, max-content) 35px;
+  grid-column-gap: 35px;
+  grid-row-gap: 10px;
   width: 100%;
   max-width: 760px;
-  min-height: 540px;
-  margin: 0 auto 50px;
-  padding-top: 35px; }
+  min-height: 350px;
+  margin-bottom: 50px; }
   .box-wrapper input[readonly] {
     background: #55626a; }
 
 .box {
+  grid-area: 2 / 2 / 3 / 3;
+  align-self: center;
+  justify-self: center;
   width: 100%;
-  max-width: 500px;
-  min-height: 400px;
+  height: 400px;
   background: #608c9f;
-  margin: 45px auto 10px;
   box-shadow: 0px 0px 30px 1px #25414a80; }
 
 .angle-radius {
-  position: absolute;
-  z-index: 9;
   width: 100%;
   max-width: 100px;
   height: 35px;
-  font-size: 24px;
+  font-size: 20px;
   color: #55626a;
   padding: 0 9px;
   background: rgba(142, 158, 171, 0.3);
@@ -571,16 +590,23 @@ input[type="checkbox"] {
   .angle-radius:focus {
     background: rgba(255, 255, 255, 0.4);
     outline: none; }
-  .angle-radius--right {
-    right: 0; }
+  .angle-radius.top-left-angle {
+    grid-area: 1 / 1 / 2 / 2; }
+  .angle-radius.top-right-angle {
+    grid-area: 1 / 3 / 2 / 4; }
+  .angle-radius.bottom-left-angle {
+    grid-area: 3 / 1 / 4 / 2; }
+  .angle-radius.bottom-right-angle {
+    grid-area: 3 / 3 / 4 / 4; }
 
 .result {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin-bottom: 50px; }
   .result-input {
     width: 100%;
-    max-width: 530px;
+    max-width: 450px;
     height: 35px;
     font-size: 20px;
     color: #55626a;

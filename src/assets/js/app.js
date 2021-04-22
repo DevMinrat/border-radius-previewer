@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapper = document.querySelector(".box-wrapper"),
     unitCheckbox = document.querySelector("#value"),
     independCheckbox = document.querySelector("#independ"),
+    sizeWidth = document.querySelector("#size-width"),
+    sizeHeight = document.querySelector("#size-height"),
     topLeftAngle = document.querySelector("#top-left-angle"),
     topRightAngle = document.querySelector("#top-right-angle"),
     bottomRightAngle = document.querySelector("#bottom-right-angle"),
@@ -46,6 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   changeInputValues();
+
+  function getCostumSize() {
+    box.style.width = sizeWidth.value + "px";
+    box.style.height = sizeHeight.value + "px";
+  }
+
+  document.addEventListener("input", getCostumSize);
 
   wrapper.addEventListener("input", changeInputValues);
 

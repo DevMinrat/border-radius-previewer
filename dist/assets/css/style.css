@@ -486,7 +486,7 @@ a:hover {
 
 .panel {
     width: 100%;
-    max-width: 510px;
+    max-width: 400px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -623,6 +623,10 @@ input[type="checkbox"]:checked + .angles-count::after {
     padding-top: 35px;
 }
 
+.box-wrapper input[readonly] {
+    background: #55626a;
+}
+
 .box {
     width: 100%;
     max-width: 500px;
@@ -659,6 +663,7 @@ input[type="checkbox"]:checked + .angles-count::after {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .result-input {
@@ -724,4 +729,16 @@ input[type="checkbox"]:checked + .angles-count::after {
 .result-copy-btn:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright__text {
+    font-size: 18px;
+}
+
+.copyright__text span {
+    font-weight: bold;
 }
