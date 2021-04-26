@@ -2,11 +2,23 @@
   width: 100%;
   max-width: 760px;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+
   align-items: center;
 
-  margin: 0 auto 75px;
+  margin-bottom: 75px;
+
+  @include breakpoint(750px) {
+    grid: auto / auto;
+    justify-items: center;
+    row-gap: 25px;
+  }
+
+  @include breakpoint(450px) {
+    grid: auto / auto;
+  }
 }
 
 .checkbox {
@@ -142,6 +154,13 @@ input[type="checkbox"] {
 
 .ind-angl-input:checked + .independent-angles::after {
   display: block;
+}
+
+.sizes {
+  @include breakpoint(420px) {
+    display: grid;
+    row-gap: 10px;
+  }
 }
 
 .sizes-label {

@@ -10,4 +10,8 @@
   padding-bottom: 15px;
 
   border-bottom: 1px solid $primary;
+
+  @include breakpoint(450px) {
+    font-size: 40px;
+  }
 }
