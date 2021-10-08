@@ -23,7 +23,7 @@ ____
 #### Демонстрация работы приложения    
 ____    
 
-![image]()
+![image](https://github.com/DevMinrat/border-radius-previewer/blob/main/JHY6pz9K9F.gif)
 
 #### Ссылки    
 ____   
